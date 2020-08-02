@@ -25,8 +25,8 @@ class Customer
     end
     
     def waiters
-      Meal.all.collect do |meal|
-        meal.waiter.uniq if meal.customer == self
+      meals.collect do |meal|
+        meal.waiter
       end
     end
   
