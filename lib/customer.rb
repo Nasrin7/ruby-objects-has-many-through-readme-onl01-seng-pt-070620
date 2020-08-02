@@ -26,7 +26,7 @@ class Customer
     
     def waiters
       Meals.all.collect do |meal|
-        meal.waiter 
+        meal.waiter if meal.Customer == self
       end
     end
   
