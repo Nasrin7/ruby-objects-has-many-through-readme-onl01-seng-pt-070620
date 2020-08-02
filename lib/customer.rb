@@ -23,5 +23,11 @@ class Customer
         meal.Customer == self
       end
     end
+    
+    def waiters
+      Meals.all.collect do |meal|
+        meal.waiter
+      end
+    end
   
 end
